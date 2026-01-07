@@ -42,6 +42,11 @@ class DokumenResource extends Resource
         return 6;
     }
 
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['title', 'description', 'nomor_dokumen'];
+    }
+
     public static function form(Schema $schema): Schema
     {
         return $schema

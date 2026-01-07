@@ -44,6 +44,11 @@ class PengumumanResource extends Resource
         return 4;
     }
 
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['title', 'content', 'slug'];
+    }
+
     public static function form(Schema $schema): Schema
     {
         return $schema

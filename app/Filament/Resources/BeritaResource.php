@@ -44,6 +44,16 @@ class BeritaResource extends Resource
         return 2;
     }
 
+    public static function getGloballySearchableAttributes(): array
+    {
+        return ['title', 'content', 'slug'];
+    }
+
+    public static function getGlobalSearchResultTitle($record): string
+    {
+        return $record->title;
+    }
+
     public static function form(Schema $schema): Schema
     {
         return $schema

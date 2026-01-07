@@ -28,9 +28,21 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
+            ->brandName('Diskominfo Tanggamus')
+            ->favicon(asset('favicon.ico'))
             ->colors([
                 'primary' => Color::Amber,
+                'danger' => Color::Rose,
+                'gray' => Color::Slate,
+                'info' => Color::Sky,
+                'success' => Color::Emerald,
+                'warning' => Color::Orange,
             ])
+            ->globalSearch(true)
+            ->globalSearchKeyBindings(['command+k', 'ctrl+k'])
+            ->sidebarCollapsibleOnDesktop()
+            ->breadcrumbs()
+            ->databaseNotifications()
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')
             ->pages([
