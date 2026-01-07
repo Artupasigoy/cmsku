@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Traits\HasOwnership;
+use App\Traits\HasSeo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -10,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Berita extends Model
 {
-    use HasFactory, SoftDeletes, HasOwnership;
+    use HasFactory, SoftDeletes, HasOwnership, HasSeo;
 
     protected $fillable = [
         'title',
